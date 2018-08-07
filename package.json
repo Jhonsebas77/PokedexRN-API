@@ -1,0 +1,65 @@
+{
+  "name": "flyers-api",
+  "version": "1.0.0",
+  "description": "Prueba Tecnica Almundo",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch",
+    "tsc": "tsc",
+    "cp-to-dist": "gulp copy-to-dist",
+    "ts-node": "ts-node --inspect=5858 src/index.ts",
+    "mkdir-dist": "rm -rf dist && mkdir dist",
+    "nodemon": "nodemon --exec 'ts-node --cache-directory .tscache' ./src/index.ts",
+    "build": "npm run mkdir-dist && npm run tsc && npm run cp-to-dist",
+    "dev": "clear && npm run mkdir-dist && npm run cp-to-dist && npm run nodemon",
+    "start": "NODE_ENV=production node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Jhonsebas77/flyers-API.git"
+  },
+  "author": "Sebastian Otalora <sebastian.otarola@almundo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/Jhonsebas77/flyers-API/issues"
+  },
+  "homepage": "https://gitlab.com/Jhonsebas77/flyers-API#README",
+  "dependencies": {
+    "@types/bunyan": "^1.8.4",
+    "body-parser": "^1.18.2",
+    "bunyan": "^1.8.12",
+    "conf": "^1.4.0",
+    "config": "^1.30.0",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "jest": "^22.4.3",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.0.12",
+    "morgan": "^1.9.0",
+    "nconf": "^0.10.0",
+    "superagent": "^3.8.2",
+    "supertest": "^3.0.0",
+    "ts-node": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/body-parser": "^1.16.8",
+    "@types/config": "0.0.34",
+    "@types/cors": "^2.8.3",
+    "@types/dotenv": "^4.0.3",
+    "@types/express": "^4.11.1",
+    "@types/gulp": "^4.0.5",
+    "@types/jest": "^22.2.2",
+    "@types/method-override": "0.0.31",
+    "@types/mongoose": "^5.0.9",
+    "@types/morgan": "^1.7.35",
+    "@types/nconf": "0.0.37",
+    "@types/sugar": "^2.0.2",
+    "@types/superagent": "^3.5.7",
+    "nodemon": "^1.17.3",
+    "ts-jest": "^22.4.2",
+    "typescript": "^2.8.3"
+  }
+}

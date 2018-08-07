@@ -1,0 +1,7 @@
+{
+    "server": {
+        "env": "development",
+        "port": 5034,
+        "base_url": "${url}/dev"
+    }
+}

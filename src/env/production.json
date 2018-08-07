@@ -1,0 +1,7 @@
+{
+    "server": {
+        "env": "production",
+        "port": 3001,
+        "base_url": "/"
+    }
+}

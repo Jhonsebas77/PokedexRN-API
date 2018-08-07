@@ -1,0 +1,26 @@
+# Flyers API
+
+Flyers API es una demo para el Semillero de Almundo desarrollada en React-Native que nos permite buscar distintos tipos de vuelos y ver el detalle del mismos
+
+
+## [1.0.0] - 2018-04-26
+### Primera versión del proyecto Flyers App [ESTABLE]
+
+## Contenido 
+
+ - El proyecto tiene una funcionalidad para retornar diferentes tipos de vuelos  
+	 - Vuelos Solo ida 
+		 - ( Ciudad Origen - Ciudad Destino - Fecha Salida )
+	 - Vuelos Ida-Vuelta 
+		 - ( Ciudad Origen - Ciudad Destino - Fecha Salida - Fecha Llegada )
+	 - Vuelos Multi-Destino
+		 - ( Ciudad Origen - Ciudad Destino - Fecha Salida ) para cada vuelo
+
+## Endpoints
+ - get /flights : Retorna Vuelos Ida
+ - get /flight-goback : Retorna Vuelos Ida y Vuelta
+ - post /flight-multi : Retorna Vuelos MultiDestino
+ - post /flight : Crea Vuelos
+
+			 
+		  
