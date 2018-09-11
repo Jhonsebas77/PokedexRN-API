@@ -62,3 +62,8 @@ buck-out/
 
 # Bundle artifact
 *.jsbundle
+coverage/clover.xml
+coverage/lcov.info
+coverage/lcov-report/jest.setup.js.html
+coverage/lcov-report/index.html
+coverage/lcov.info
