@@ -4,7 +4,8 @@
   "description": "API para Pokedex BAsico",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch",
+    "test": "NODE_ENV=development jest --coverage --detectOpenHandles --forceExit",
+    "test:watch": "NODE_ENV=development jest --watch",
     "tsc": "tsc",
     "cp-to-dist": "gulp copy-to-dist",
     "ts-node": "ts-node --inspect=5858 src/index.ts",
