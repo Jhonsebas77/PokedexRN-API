@@ -3,6 +3,8 @@ Flyers App es una demo para el Semillero de Almundo desarrollada en React-Native
 
 *Desarrollado por:* **Sebastian Otalora**
 
+![Travis CI Build Status](the_image_url_here)
+
 ## Instalación
 Primero se debe clonar el proyecto
 <kbd>**SSH:** git@gitlab.com:Jhonsebas77/flyers-API.git</kbd>  

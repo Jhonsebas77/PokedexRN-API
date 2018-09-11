@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '8'
+branches:
+  only:
+  - master
+deploy:
+  provider: heroku
+  api_key:
+    secure: "AAAAB3NzaC1yc2EAAAADAQABAAABAQDtD3CoVmL5CuZNSkKiiy4enCFX8uWL1gl8zF7udnfo42WlcmSsUUHAWfSNqX+JrDhunBtvd0sWqeuHnOsYXYnHPAmnRqUfiDAnTPdEYRUhfEHkC296bx5evlY+xdalFDTVLPF9AjV8K7vCvO6qmnK8Szy0RymHTZ1lMTdKzadOA54HFbX5uv/1SGz+BRILWPyCoSMkrkk5iFzCTQV0UiigWeD1XY9yCPvFDCZpVhZENdA99ByhY9cW73f7HKNIJx7cidKMhEbFUUVcGzkL/td25xO9vo+sJ9o8tVMpvg3BK+HLTuQUGvfNA+/THcDDT6iEJw9oUSCE/P1oIRV9a9mb"
+app: pokedexrn-api
