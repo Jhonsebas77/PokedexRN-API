@@ -2,6 +2,9 @@
     "server": {
         "env": "development",
         "port": 5034,
-        "base_url": "${url}/dev"
+        "base_url": "${url}/dev",
+        "usr":"JSOB",
+        "pwd":"0506jo",
+        "longURL": "@ds111638.mlab.com:11638/otadb"
     }
 }
