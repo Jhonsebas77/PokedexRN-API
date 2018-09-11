@@ -64,16 +64,16 @@
   },
   "jest": {
     "transform": {
-      "^.+\\.tsx?$": "ts-jest"
+      ".(ts|tsx)": "./node_modules/ts-jest/preprocessor.js"
     },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testRegex": "(/__test__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
       "js",
-      "jsx",
-      "json",
-      "node"
-    ]
+      "json"
+    ],
+    "setupTestFrameworkScriptFile": "./jest.setup.js",
+    "collectCoverage": true
   }
 }
