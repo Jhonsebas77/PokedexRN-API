@@ -1,7 +1,7 @@
-import cors from 'cors'
 import bodyParser from 'body-parser'
-import config from 'config'
-export const middleware: { [index: string]: any } = {
+import cors from 'cors'
+import expressHealthCheck from 'express-healthcheck'
+export const middlewareServer: { [index: string]: any } = {
     cors: {
         mountPoint: '',
         handler: cors()
@@ -13,5 +13,9 @@ export const middleware: { [index: string]: any } = {
     jsonParser: {
         mountPoint: '',
         handler: bodyParser.json()
+    },
+    healthCheck: {
+        mountPoint: '/health',
+        handler: expressHealthCheck()
     }
 }
