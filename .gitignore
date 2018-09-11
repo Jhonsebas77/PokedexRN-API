@@ -40,6 +40,9 @@ package-lock.json
 .tscache/
 dist/
 .tscache
+package-lock.json
+yarn-lock
+yarn.lock
 dist
 # BUCK
 buck-out/
