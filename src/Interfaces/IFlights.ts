@@ -1,14 +1,11 @@
 import { ISites } from './ISites'
 import { ISegments } from './ISegments'
 export interface IFlights {
-    origin: ISites,
-    destination: ISites,
-    segments: ISegments,
-    price: string,
-    image: string,
-    date: Date,
-    duration: string,
-    airlane: string,
-    airplane: string,
-    class: string
+    name: String,
+    url: String,
+    urlSprite: String,
+    type: {
+        type1: String,
+        type2?: String
+    }
 }

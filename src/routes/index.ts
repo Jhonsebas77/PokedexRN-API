@@ -8,7 +8,7 @@ export const Routes: { [index: string]: any } = {
     },
     Flights: {
         verb: 'get',
-        uri: '/flights',
+        uri: '/pokedex',
         action: Controller.flights
     },
     FlightGo: {
@@ -28,7 +28,7 @@ export const Routes: { [index: string]: any } = {
     },
     createFlight: {
         verb: 'post',
-        uri: '/flight',
+        uri: '/pokedex',
         action: Controller.createFlight
     },
     places: {
