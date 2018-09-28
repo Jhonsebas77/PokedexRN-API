@@ -9,6 +9,7 @@ export const FlightSchema: Schema = new Schema({
     name: String,
     url: String,
     urlSprite: String,
+    idDex: Number,
     types: [Array]
 }, { timestamps: true, versionKey: false })
 
