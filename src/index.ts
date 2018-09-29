@@ -4,7 +4,7 @@ import { middlewareServer } from './middlewares'
 import { Routes } from './routes'
 import { Connect } from './config/Connection'
 
-export default class Server extends InfraWeb {
+export class Server extends InfraWeb {
     constructor() {
         super()
         Connect()

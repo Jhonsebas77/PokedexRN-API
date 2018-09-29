@@ -1,85 +1,32 @@
-import { Flight } from '../models/Schema/Flights'
-import { Place } from '../models/Schema/Places'
-import { log } from 'util'
+import { Pokedex } from '../models/Schema/Pokedex'
+
 export const Services = {
-    home: async () => {
-        return 'Service Home'
-    },
-    flights: async () => {
+    pokedex: async () => {
         try {
-            const data = await Flight.find()
+            const data = await Pokedex.find()
             return data
         } catch (error) {
-            return `Error al buscar los Hoteles ${error}`
-        }
-    },
-    flightGo: async (query: any) => {
-        try {
-            console.log('---')
-            console.log(query)
-            const { destination, origin, date } = query
-            const data = await Flight.find({
-                'destination.iata': destination,
-                'origin.iata': origin,
-                'date': new Date(date)
-            })
-            return data
-        } catch (error) {
-            return error
-        }
-    },
-    flightGoBack: async (query: any) => {
-        try {
-            const { destination, origin, date, returnDate } = query
-            const go = await Services.flightGo({
-                destination: destination, origin: origin, date: date
-            })
-            const back = await Services.flightGo({
-                destination: origin, origin: destination, date: returnDate
-            })
-            return { go, back }
-        } catch (error) {
-            return error
+            return `Error al buscar los pokemones ${error}`
         }
     },
 
-    flightMulti: async (query: any) => {
+    savePokedex: async (pokedex: any) => {
         try {
-            const { multi } = query
-            console.log(query)
-            let multiFlights: any = {}
-            for (let i = 0; i < multi.length; i++) {
-                multiFlights[`Fly${i + 1}`] = await Services.flightGo(multi[i])
-            }
-            return multiFlights
+            const data = await Pokedex.create(Object.assign({}, pokedex))
+            return data
         } catch (error) {
-            return error
+            return `Error al guardar el pokemon  ${error}`
         }
     },
 
-    saveFlight: async (flight: any) => {
+    updatePokedex: async (req: any, res: any) => {
+        let idDex = req.params.idDex;
+        let pokedex = req.body;
         try {
-            const data = await Flight.create(Object.assign({}, flight))
+            const data = await Pokedex.findOneAndUpdate(idDex, pokedex)
             return data
         } catch (error) {
-            return `Error  ${error}`
-        }
-    },
-    places: async () => {
-        try {
-            const data = await Place.find()
-            return data
-        } catch (error) {
-            return `Error  ${error}`
-        }
-    },
-    savePlace: async (place: any) => {
-        try {
-            const data = await Place.create(Object.assign({}, place))
-            return data
-        } catch (error) {
-            return `Error  ${error}`
+            return `Error al actualizar el pokemon  ${error}`
         }
     }
-
 }

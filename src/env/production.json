@@ -3,8 +3,10 @@
         "env": "production",
         "port": 3001,
         "base_url": "/",
-        "usr":"JSOB",
-        "pwd":"0506jo",
-        "longURL": "@ds111638.mlab.com:11638/otadb"
+        "database": {
+            "user": "JSOB",
+            "pwd": "0506jo",
+            "db": "@ds111638.mlab.com:11638/otadb"
+        }
     }
 }

@@ -1,6 +1,4 @@
-import { ISites } from './ISites'
-import { ISegments } from './ISegments'
-export interface IFlights {
+export interface IPokedex {
     name: String,
     url: String,
     urlSprite: String,

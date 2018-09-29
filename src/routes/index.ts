@@ -1,44 +1,19 @@
 import { Controller } from '../Controllers'
 
 export const Routes: { [index: string]: any } = {
-    Home: {
-        verb: 'get',
-        uri: '/',
-        action: Controller.home
-    },
-    Flights: {
+    Pokedex: {
         verb: 'get',
         uri: '/pokedex',
-        action: Controller.flights
+        action: Controller.pokedex
     },
-    FlightGo: {
-        verb: 'get',
-        uri: '/flight',
-        action: Controller.flightGo
-    },
-    FlightGoBack: {
-        verb: 'get',
-        uri: '/flight-goback',
-        action: Controller.flightGoBack
-    },
-    FlightMulti: {
-        verb: 'post',
-        uri: '/flight-multi',
-        action: Controller.flightMulti
-    },
-    createFlight: {
+    CreatePokedex: {
         verb: 'post',
         uri: '/pokedex',
-        action: Controller.createFlight
+        action: Controller.createPokedex
     },
-    places: {
-        verb: 'get',
-        uri: '/places',
-        action: Controller.places
-    },
-    createPlaces: {
-        verb: 'post',
-        uri: '/places',
-        action: Controller.createPlaces
+    UpdatePokedex: {
+        verb: 'put',
+        uri: '/pokedex/:idDex',
+        action: Controller.updatePokedex
     }
 }
