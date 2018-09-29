@@ -40,6 +40,7 @@ package-lock.json
 .tscache/
 dist/
 .tscache
+coverage/
 package-lock.json
 yarn-lock
 yarn.lock
