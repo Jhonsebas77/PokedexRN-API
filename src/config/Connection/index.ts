@@ -2,8 +2,8 @@ import mongoose, { mongo } from 'mongoose'
 import bunyan from 'bunyan'
 import config from 'config'
 
-const {usr, pwd, longURL } = config.get('server')
-const dbUri = `mongodb://${usr}:${pwd}${longURL}`
+const {user, pwd, db } = config.get('server.database')
+const dbUri = `mongodb://${user}:${pwd}${db}`
 const log = bunyan.createLogger({ name: 'Mongo Status:' })
 mongoose.connect(dbUri)
 export const Connect = () => {

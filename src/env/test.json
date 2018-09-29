@@ -2,6 +2,11 @@
     "server": {
         "env": "test",
         "port": 4567,
-        "base_url": "/"
+        "base_url": "/",
+        "database": {
+            "user": "JSOB",
+            "pwd": "0506jo",
+            "db": "@ds111638.mlab.com:11638/otadb"
+        }
     }
 }
