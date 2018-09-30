@@ -2,9 +2,9 @@
 import { Document, Schema, Model, model } from 'mongoose'
 import { IitemList } from '../../Interfaces/IitemList';
 
-export interface ItemModel extends IitemList, Document { }
+export interface ItemListModel extends IitemList, Document { }
 
-export const ItemSchema: Schema = new Schema({
+export const ItemListSchema: Schema = new Schema({
     name: String,
     url: String,
     urlSprite: String,
@@ -12,4 +12,4 @@ export const ItemSchema: Schema = new Schema({
     type: String
 }, { timestamps: true, versionKey: false })
 
-export const Item_list: Model<ItemModel> = model<ItemModel>('item_list', ItemSchema)
+export const Item_list: Model<ItemListModel> = model<ItemListModel>('item_list', ItemListSchema)
