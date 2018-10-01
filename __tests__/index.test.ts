@@ -1,12 +1,15 @@
-
 import 'jest'
 import request from 'supertest'
-import { Server } from '../src'
-const app = Server.bootstrap()
+import bunyan from 'bunyan'
+import express from 'express'
+import bodyParser from 'body-parser'
 describe('App express test suite', () => {
-    it('It should expecting 200 http status code value when asking health route', async () => {
+    const app = express()
+    const log = bunyan.createLogger({ name: '.:Test Server:.' })
+    it('It should expecting 404', async () => {
+        log.info(`=> Test`)
         return request(app)
             .get('/pokedex')
-            .expect(200)
+            .expect(404)
     })
 })
