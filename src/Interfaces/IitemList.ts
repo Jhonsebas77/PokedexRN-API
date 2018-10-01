@@ -3,5 +3,5 @@ export interface IitemList {
     url: String,
     urlSprite: String,
     idDex: Number,
-    type: Number
+    type: String
 }

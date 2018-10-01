@@ -1,0 +1,54 @@
+{
+    "name": "master-ball",
+    "urlSprite": "https://s3.us-east-2.amazonaws.com/pokedex-jsob/Item_PGL/Pokeball/masterball.png",
+    "idDex": 1,
+    "effect_entries": [
+        {
+            "effect": "Used in battle\n:   Catches a wild Pokémon without fail.\n\n    If used in a trainer battle, nothing happens and the ball is lost.",
+            "short_effect": "Catches a wild Pokémon every time."
+        }
+    ],
+    "category": "Pokeball",
+    "attributes": [
+        {
+            "holdable": true,
+            "usable-in-battle": true,
+            "consumable": true,
+            "countable": true,
+            "holdable-passive": false,
+            "usable-overworld": false,
+            "holdable-active": false,
+            "underground": false
+        }
+    ],
+    "baby_trigger_for": [
+        {
+            "name": "",
+            "urlSprite": "",
+            "url": ""
+        }
+    ],
+    "evolution_for": [
+        {
+            "name": "",
+            "urlSprite": "",
+            "url": ""
+        }
+    ],
+    "cost": 0,
+    "fling": [
+        {
+            "effect": "",
+            "power": ""
+        }
+    ],
+    "machines": null,
+    "held_by_pokemon": [
+        {
+            "name": "",
+            "urlSprite": "",
+            "url": "",
+            "probability": ""
+        }
+    ]
+}

@@ -2,6 +2,7 @@ import { Services } from '../Services'
 import { Response, Request } from 'express'
 
 export const Controller = {
+    //Listado Pokedex
     pokedex: async (req: Request, res: Response) => {
         const data = await Services.pokedex()
         res.send(data)
@@ -14,6 +15,7 @@ export const Controller = {
         const data = await Services.updatePokedex(req, res)
         res.send(data)
     },
+    //Listado Objetos
     itemList: async (req: Request, res: Response) => {
         const data = await Services.itemList()
         res.send(data)
@@ -24,6 +26,19 @@ export const Controller = {
     },
     updateItemList: async (req: Request, res: Response) => {
         const data = await Services.updateItemList(req, res)
+        res.send(data)
+    },
+    //Objetos
+    item: async (req: Request, res: Response) => {
+        const data = await Services.item(req)
+        res.send(data)
+    },
+    createItem: async (req: Request, res: Response) => {
+        const data = await Services.saveitem(req.body)
+        res.send(data)
+    },
+    updateItem: async (req: Request, res: Response) => {
+        const data = await Services.updateItem(req, res)
         res.send(data)
     }
 }

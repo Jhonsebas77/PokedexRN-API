@@ -1,6 +1,7 @@
 import { Controller } from '../Controllers'
 
 export const Routes: { [index: string]: any } = {
+    //Listado Pokedex
     Pokedex: {
         verb: 'get',
         uri: '/pokedex',
@@ -16,6 +17,7 @@ export const Routes: { [index: string]: any } = {
         uri: '/pokedex/:idDex',
         action: Controller.updatePokedex
     },
+    //Listado Objetos
     Item_List: {
         verb: 'get',
         uri: '/itemlist',
@@ -30,5 +32,21 @@ export const Routes: { [index: string]: any } = {
         verb: 'put',
         uri: '/itemlist/:idDex',
         action: Controller.updateItemList
+    },
+    //Objetos
+    Item: {
+        verb: 'get',
+        uri: '/item/:idDex',
+        action: Controller.item
+    },
+    CreateItem: {
+        verb: 'post',
+        uri: '/item',
+        action: Controller.createItem
+    },
+    UpdateItem: {
+        verb: 'put',
+        uri: '/item/:idDex',
+        action: Controller.updateItem
     }
 }
