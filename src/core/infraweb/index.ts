@@ -26,9 +26,9 @@ export abstract class InfraWeb {
     public startServer() {
         const { port, env } = config.get('server')
         this.server = http.createServer(this.app)
-        this.server.listen(port, () => {
+        this.server.listen(process.env.PORT || port, () => {
             const log = bunyan.createLogger({ name: 'Start Server:' })
-            log.info(`=> Servidor corriendo en el puerto ${port} en ${env} mode`)
+            log.info(`=> Servidor corriendo en el puerto ${process.env.PORT || port} en ${env} mode`)
         })
     }
 
