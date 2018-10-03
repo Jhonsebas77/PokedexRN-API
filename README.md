@@ -1,7 +1,7 @@
-﻿![Travis CI Build Status](the_image_url_here)
-
-# PokedexRN API
-Esta es la API de PokedexRN (<kbd>**SSH:** git@github.com:Jhonsebas77/PokedexRN.git</kbd>), una Pokedex basica desarrollada en React-Native que nos permite consultar toda la informacion sobre los Pokemones, Objetos y demas
+﻿# PokedexRN API
+[![Build Status](https://travis-ci.org/Jhonsebas77/PokedexRN-API.svg?branch=master)](https://travis-ci.org/Jhonsebas77/PokedexRN-API)  
+______
+Esta es la API de PokedexRN  (<kbd>**SSH:** git@github.com:Jhonsebas77/PokedexRN.git</kbd>), una Pokedex basica desarrollada en React-Native que nos permite consultar toda la informacion sobre los Pokemones, Objetos y demas
 
 <kbd>LA INFORMACION USADA ES PROPIEDAD DE POKEMON COMPANY</kbd>
 
