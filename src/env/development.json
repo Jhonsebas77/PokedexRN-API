@@ -2,7 +2,6 @@
     "server": {
         "env": "development",
         "port": 5034,
-        "base_url": "${url}/dev",
         "database": {
             "user": "JSOB",
             "pwd": "0506jo",

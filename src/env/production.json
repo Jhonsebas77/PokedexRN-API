@@ -2,7 +2,6 @@
     "server": {
         "env": "production",
         "port": 3001,
-        "base_url": "/",
         "database": {
             "user": "JSOB",
             "pwd": "0506jo",

@@ -1,35 +1,39 @@
-import express, { Request, Response, Router } from 'express'
 import config from 'config'
-import http from 'http'
-import bunyan from 'bunyan'
-
-export abstract class InfraWeb {
-    public app: any
-    private server: any
+import { Database } from '../../config/Connection'
+import { Server } from '../../index'
+export class Core {
+    public middleware: any
+    public configuration: string
     constructor() {
-        this.app = express()
+        this.middleware = new Server().middleware
+        this.configuration = config.get('server')
     }
-
-    public use(middlewares: any): void {
+    public use(...args: any[]) {
+        this.middleware.use(...args)
+        return this
+    }
+    public mountMiddleware(middlewares: any) {
         Object.keys(middlewares).forEach((key) => {
-            this.app.use(middlewares[key].mountPoint, middlewares[key].handler)
-        })
-        this.app.use(express.static(`${__dirname}/public`))
-    }
-
-    public mountRoutes(routes: any): void {
-        Object.keys(routes).forEach((key) => {
-            this.app[routes[key].verb](routes[key].uri, routes[key].action)
+            this.middleware.use(middlewares[key].mountPoint, middlewares[key].handler)
         })
     }
-
+    public listen(port: any, listeningListener: () => void | undefined) {
+        this.middleware.listen(port, listeningListener)
+    }
     public startServer() {
-        const { port, env } = config.get('server')
-        this.server = http.createServer(this.app)
-        this.server.listen(process.env.PORT || port, () => {
-            const log = bunyan.createLogger({ name: 'Start Server:' })
-            log.info(`=> Servidor corriendo en el puerto ${process.env.PORT || port} en ${env} mode`)
-        })
+        Database.connect(
+            (this.configuration as any).database.user,
+            (this.configuration as any).database.pwd,
+            (this.configuration as any).database.db),
+        Database.debug(true)
+        this.listen(
+            process.env.PORT || (this.configuration as any).port,
+            () => console.log(`Server Running at localhost:${process.env.PORT || (this.configuration as any).port}`)
+        )
     }
-
 }
+
+
+
+// const log = bunyan.createLogger({ name: 'Start Server:' })
+// log.info(`=> Servidor corriendo en el puerto ${process.env.PORT || port} en ${env} mode`)
