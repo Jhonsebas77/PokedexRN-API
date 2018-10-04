@@ -5,7 +5,7 @@
         "database": {
             "user": "JSOB",
             "pwd": "0506jo",
-            "db": "@ds111638.mlab.com:11638/otadb"
+            "db": "ds111638.mlab.com:11638/otadb"
         }
     }
 }

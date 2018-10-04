@@ -1,16 +1,23 @@
 import config from 'config'
-import { Database } from '../../config/Connection'
-import { Server } from '../../index'
+import { Database } from '../../database/connection'
+import { ExpressApp } from '../app'
 export class Core {
     public middleware: any
     public configuration: string
     constructor() {
-        this.middleware = new Server().middleware
+        this.middleware = new ExpressApp().middleware
         this.configuration = config.get('server')
     }
     public use(...args: any[]) {
         this.middleware.use(...args)
         return this
+    }
+    public mountRoutes(routes: any) {
+        routes.map((subRoutes: any) => {
+            Object.keys(subRoutes).forEach((key) => {
+                this.middleware[subRoutes[key].verb](subRoutes[key].mountPoint, subRoutes[key].handler)
+            })
+        })
     }
     public mountMiddleware(middlewares: any) {
         Object.keys(middlewares).forEach((key) => {
@@ -32,8 +39,3 @@ export class Core {
         )
     }
 }
-
-
-
-// const log = bunyan.createLogger({ name: 'Start Server:' })
-// log.info(`=> Servidor corriendo en el puerto ${process.env.PORT || port} en ${env} mode`)

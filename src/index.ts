@@ -1,6 +1,7 @@
+
 process.env.NODE_CONFIG_DIR = `${__dirname}/env`
 import { Core } from './core/infraweb'
-import { middlewareServer } from './middlewares'
+import { middlewareServer, routesServer } from './middlewares'
 export class Server extends Core {
     public static bootstrap() {
         return new Server()
@@ -8,6 +9,7 @@ export class Server extends Core {
     constructor() {
         super()
         this.mountMiddleware(middlewareServer)
+        this.mountRoutes(routesServer)
     }
 }
 Server.bootstrap().startServer()

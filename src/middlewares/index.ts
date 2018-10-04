@@ -1,6 +1,7 @@
 import bodyParser from 'body-parser'
 import cors from 'cors'
 import expressHealthCheck from 'express-healthcheck'
+import { allRoutes } from '../api/routes'
 export const middlewareServer: { [index: string]: any } = {
     cors: {
         mountPoint: '',
@@ -19,3 +20,4 @@ export const middlewareServer: { [index: string]: any } = {
         handler: expressHealthCheck()
     }
 }
+export const routesServer = allRoutes

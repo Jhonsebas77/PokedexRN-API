@@ -1,8 +1,5 @@
-import { Document, Schema, Model, model } from 'mongoose'
-import { IPokedex } from '../../Interfaces/IPokedex';
-
+import { Document, Model, model, Schema } from 'mongoose'
 export interface PokedexModel extends IPokedex, Document { }
-
 export const PokedexSchema: Schema = new Schema({
     name: String,
     url: String,
