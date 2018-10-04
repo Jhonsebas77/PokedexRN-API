@@ -65,6 +65,7 @@
     "@types/mongoose": "^5.0.9",
     "@types/morgan": "^1.7.35",
     "@types/nconf": "0.0.37",
+    "@types/node": "^10.11.4",
     "@types/sugar": "^2.0.2",
     "@types/superagent": "^3.5.7",
     "nodemon": "^1.17.3",
