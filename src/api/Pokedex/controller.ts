@@ -1,7 +1,7 @@
 import { Services } from './services'
 import { Response, Request } from 'express'
 
-export const Controller = {
+export const pokedexController = {
     pokedex: async (req: Request, res: Response) => {
         const data = await Services.pokedex()
         res.send(data)
