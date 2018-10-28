@@ -1,4 +1,5 @@
 import { pokedexController } from './controller'
+
 export const routesPokedex: { [index: string]: any } = {
     Pokedex: {
         verb: 'get',
