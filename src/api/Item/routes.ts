@@ -1,6 +1,6 @@
 import { itemController } from './controller'
 
-export const Routes: { [index: string]: any } = {
+export const routesItem: { [index: string]: any } = {
     Item: {
         verb: 'get',
         uri: '/item/:idDex',
