@@ -1,4 +1,4 @@
-import { pokedexRoutes } from '../Pokedex/routes'
+import { routesPokedex } from '../Pokedex/routes'
 export const allRoutes = [
-    pokedexRoutes
+    routesPokedex
 ]

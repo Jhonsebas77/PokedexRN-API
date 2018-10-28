@@ -12,13 +12,13 @@ export class Core {
         this.middleware.use(...args)
         return this
     }
-    // public mountRoutes(routes: any) {
-    //     routes.map((subRoutes: any) => {
-    //         Object.keys(subRoutes).forEach((key) => {
-    //             this.middleware[subRoutes[key].verb](subRoutes[key].mountPoint, subRoutes[key].handler)
-    //         })
-    //     })
-    // }
+    public mountRoutes(routes: any) {
+        routes.map((subRoutes: any) => {
+            Object.keys(subRoutes).forEach((key) => {
+                this.middleware[subRoutes[key].verb](subRoutes[key].uri, subRoutes[key].action)
+            })
+        })
+    }
     public mountMiddleware(middlewares: any) {
         Object.keys(middlewares).forEach((key) => {
             this.middleware.use(middlewares[key].mountPoint, middlewares[key].handler)

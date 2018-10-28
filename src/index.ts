@@ -8,7 +8,7 @@ export class Server extends Core {
     constructor() {
         super()
         this.mountMiddleware(middlewareServer)
-        // this.mountRoutes(routesServer)
+        this.mountRoutes(routesServer)
     }
 }
 Server.bootstrap().startServer()
