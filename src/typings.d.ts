@@ -15,6 +15,14 @@ interface IitemList {
     type: String
 }
 
+interface ImoveList {
+    name: String,
+    url: String,
+    urlSprite: String,
+    idDex: Number,
+    type: String
+}
+
 interface IPokedex {
     name: String,
     url: String,
