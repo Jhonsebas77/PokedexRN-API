@@ -1,9 +1,5 @@
-
-import { Document, Schema, Model, model } from 'mongoose'
-import { IitemList } from '../../Interfaces/IitemList';
-
+import { Document, Model, model, Schema } from 'mongoose'
 export interface ItemListModel extends IitemList, Document { }
-
 export const ItemListSchema: Schema = new Schema({
     name: String,
     url: String,
@@ -11,5 +7,4 @@ export const ItemListSchema: Schema = new Schema({
     idDex: Number,
     type: String
 }, { timestamps: true, versionKey: false })
-
 export const Item_list: Model<ItemListModel> = model<ItemListModel>('item_list', ItemListSchema)

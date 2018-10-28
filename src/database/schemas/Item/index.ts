@@ -1,9 +1,5 @@
-
-import { Document, Schema, Model, model } from 'mongoose'
-import { Iitem } from '../../Interfaces/Iitem';
-
+import { Document, Model, model, Schema } from 'mongoose'
 export interface ItemModel extends Iitem, Document { }
-
 export const ItemSchema: Schema = new Schema({
     name: String,
     urlSprite: String,
@@ -16,7 +12,6 @@ export const ItemSchema: Schema = new Schema({
     machines: [Array],
     baby_trigger_for: [Array],
     evolution_for: [Array],
-    attributes: [Array],
+    attributes: [Array]
 }, { timestamps: true, versionKey: false })
-
 export const Item: Model<ItemModel> = model<ItemModel>('item', ItemSchema)

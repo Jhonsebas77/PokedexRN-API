@@ -1,7 +1,7 @@
 {
     "server": {
-        "env": "test",
-        "port": 4567,
+        "env": "staging",
+        "port": 5000,
         "database": {
             "user": "JSOB",
             "pwd": "0506jo",
