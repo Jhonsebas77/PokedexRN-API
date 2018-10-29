@@ -1,9 +1,10 @@
 import { Move } from '../../database/schemas/Move'
 
 export const Services = {
-    move: async () => {
+    move:  async (req: any) => {
         try {
-            const data = await Move.find()
+            let idDex = req.params.idDex;
+            const data = await Move.findOne({ idDex })
             return data
         } catch (error) {
             return `Error al buscar los items ${error}`

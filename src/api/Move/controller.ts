@@ -3,7 +3,7 @@ import { Response, Request } from 'express'
 
 export const moveController = {
     move: async (req: Request, res: Response) => {
-        const data = await Services.move()
+        const data = await Services.move(req)
         res.send(data)
     },
     createMove: async (req: Request, res: Response) => {

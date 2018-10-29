@@ -3,7 +3,7 @@ import { moveController } from './controller'
 export const routesMove: { [index: string]: any } = {
     Move: {
         verb: 'get',
-        uri: '/move',
+        uri: '/move/:idDex',
         action: moveController.move
     },
     CreateMove: {
