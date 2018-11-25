@@ -24,7 +24,13 @@ export const PokemonSchema: Schema = new Schema({
         attack: Number,
         hp: Number
     },
-    types: [Array]
+    types: [Array],
+    dex_entry: {
+        classification: String,
+        flavor_text: String
+    },
+    prev_evolution: [Array],
+    next_evolution: [Array]
 }, { timestamps: true, versionKey: false })
 
 export const Pokemon: Model<PokemonModel> = model<PokemonModel>('pokemon', PokemonSchema)
