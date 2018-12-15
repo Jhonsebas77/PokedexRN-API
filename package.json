@@ -19,7 +19,8 @@
     "pr": "NODE_ENV=production && clear && npm run mkdir-dist && npm run cp-to-dist && npm run nodemon",
     "start-dev": "NODE_ENV=development && npm run build && npm run start",
     "start-st": "NODE_ENV=staging && npm run build && npm run start",
-    "start-pr": "NODE_ENV=production && npm run build && npm run start"
+    "start-pr": "NODE_ENV=production && npm run build && npm run start",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
