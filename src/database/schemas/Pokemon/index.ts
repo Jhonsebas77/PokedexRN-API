@@ -6,9 +6,14 @@ export const PokemonSchema: Schema = new Schema({
     weight: String,
     idDex: Number,
     sprites: {
-        normal: String,
-        shiny: String,
-        female: String
+        male: String,
+        shiny_male: String,
+        female: String,
+        shiny_female: String,
+        mega_shiny: String,
+        mega: String,
+        alola: String,
+        alola_shiny: String
     },
     object: {
         name: String,
