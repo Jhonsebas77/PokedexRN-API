@@ -10,8 +10,10 @@ export const PokemonSchema: Schema = new Schema({
         shiny_male: String,
         female: String,
         shiny_female: String,
-        mega_shiny: String,
-        mega: String,
+        mega_shiny_1: String,
+        mega_1: String,
+        mega_shiny_2: String,
+        mega_2: String,
         alola: String,
         alola_shiny: String
     },
