@@ -29,8 +29,7 @@ export const PokemonSchema: Schema = new Schema({
         classification: String,
         flavor_text: String
     },
-    prev_evolution: [Array],
-    next_evolution: [Array]
+    line_evolution: [Array]
 }, { timestamps: true, versionKey: false })
 
 export const Pokemon: Model<PokemonModel> = model<PokemonModel>('pokemon', PokemonSchema)
