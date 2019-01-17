@@ -2,8 +2,9 @@ import { Pokedex } from '../../database/schemas/pokedex'
 
 export const Services = {
     pokedex: async () => {
+        const sort = { idDex: 1 }
         try {
-            const data = await Pokedex.find()
+            const data = await Pokedex.find().sort(sort)
             return data
         } catch (error) {
             return `Error al buscar los pokemones ${error}`
