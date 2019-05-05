@@ -5,7 +5,7 @@ export const PokedexSchema: Schema = new Schema({
     url: String,
     urlSprite: String,
     idDex: Number,
-    types: [Array]
+    types: Array
 }, { timestamps: true, versionKey: false })
 
 export const Pokedex: Model<PokedexModel> = model<PokedexModel>('pokedex', PokedexSchema)
