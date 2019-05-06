@@ -31,7 +31,7 @@ export const PokemonSchema: Schema = new Schema({
         attack: Number,
         hp: Number
     },
-    types: [Array],
+    types: Array,
     dex_entry: {
         classification: String,
         flavor_text: String
