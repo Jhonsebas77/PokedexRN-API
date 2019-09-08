@@ -16,6 +16,7 @@
     "dev": "export NODE_ENV=development && clear && npm run mkdir-dist && npm run cp-to-dist && npm run nodemon",
     "start": "node ./dist/index.js",
     "st": "NODE_ENV=staging && clear && npm run mkdir-dist && npm run cp-to-dist && npm run nodemon",
+    "ngrok-st":"/Applications/ngrok http 5034",
     "pr": "NODE_ENV=production && clear && npm run mkdir-dist && npm run cp-to-dist && npm run nodemon",
     "start-dev": "NODE_ENV=development && npm run build && npm run start",
     "start-st": "NODE_ENV=staging && npm run build && npm run start",
