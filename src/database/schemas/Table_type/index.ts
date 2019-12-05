@@ -5,7 +5,9 @@ export const TypeSchema: Schema = new Schema({
     sprite: String,
     idDex: Number,
     weaknesses: [Array],
-    strengths: [Array]
+    strengths: [Array],
+    resistants: [Array],
+    vulnerables: [Array]
 }, { timestamps: true, versionKey: false })
 
 export const Type: Model<TypeModel> = model<TypeModel>('Types', TypeSchema)
