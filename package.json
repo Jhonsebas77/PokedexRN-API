@@ -16,7 +16,7 @@
     "dev": "export NODE_ENV=development && clear && npm run mkdir-dist && npm run cp-to-dist && npm run nodemon",
     "start": "node ./dist/index.js",
     "st": "NODE_ENV=staging && clear && npm run mkdir-dist && npm run cp-to-dist && npm run nodemon",
-    "ngrok-st":"/Applications/ngrok http 5034",
+    "ngrok-st": "/Applications/ngrok http 5034",
     "pr": "NODE_ENV=production && clear && npm run mkdir-dist && npm run cp-to-dist && npm run nodemon",
     "start-dev": "NODE_ENV=development && npm run build && npm run start",
     "start-st": "NODE_ENV=staging && npm run build && npm run start",
@@ -43,17 +43,15 @@
     "express": "^4.16.3",
     "express-healthcheck": "^0.1.0",
     "gulp": "^3.9.1",
+    "mongodb": "3.3.2",
     "jest": "^23.6.0",
     "method-override": "^2.3.10",
     "mongoose": "^5.0.12",
     "morgan": "^1.9.0",
     "nconf": "^0.10.0",
-    "superagent": "^3.8.2",
-    "supertest": "^3.0.0",
     "ts-node": "^5.0.1"
   },
   "devDependencies": {
-    "@types/supertest": "^2.0.6",
     "@types/axios": "^0.14.0",
     "@types/body-parser": "^1.16.8",
     "@types/bunyan": "^1.8.4",
@@ -68,11 +66,13 @@
     "@types/morgan": "^1.7.35",
     "@types/nconf": "0.0.37",
     "@types/node": "^10.11.4",
+    "@types/mongodb": "3.3.1",
     "@types/sugar": "^2.0.2",
-    "@types/superagent": "^3.5.7",
+    "supertest": "^4.0.2",
     "nodemon": "^1.17.3",
     "ts-jest": "^22.4.2",
-    "typescript": "^2.8.3"
+    "typescript": "^3.6.4",
+    "typescript-json-schema": "^0.40.0"
   },
   "jest": {
     "transform": {
