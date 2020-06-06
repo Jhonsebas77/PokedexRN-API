@@ -33,6 +33,13 @@ interface IPokedex {
     }
 }
 
+interface IType {
+    name: String,
+    sprite: String,
+    weight: String,
+    idDex: Number
+}
+
 interface Iitem {
     name: String,
     urlSprite: String,
