@@ -5,7 +5,7 @@
         "database": {
             "user": "JSOB",
             "pwd": "0506jo",
-            "db": "ds111638.mlab.com:11638/otadb"
+            "db": "jsob-db-shard-00-00.vy1d9.mongodb.net:27017,jsob-db-shard-00-01.vy1d9.mongodb.net:27017,jsob-db-shard-00-02.vy1d9.mongodb.net:27017/jsob_db"
         }
     }
 }
