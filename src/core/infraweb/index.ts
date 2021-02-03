@@ -32,7 +32,7 @@ export class Core {
             (this.configuration as any).database.user,
             (this.configuration as any).database.pwd,
             (this.configuration as any).database.db),
-        Database.debug(true)
+        // Database.debug(true)
         this.listen(
             process.env.PORT || (this.configuration as any).port,
             () => console.log(`Server Running at localhost:${process.env.PORT || (this.configuration as any).port}`)
