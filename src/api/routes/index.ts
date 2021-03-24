@@ -3,6 +3,7 @@ import { routesPokemon } from '../Pokemon/routes'
 import { routesItemList } from '../Item_List/routes'
 import { routesItem } from '../Item/routes'
 import { routesMoveList } from '../Move_List/routes'
+import { routesUser } from '../user/routes'
 import { routesMove } from '../Move/routes'
 import { routesType } from '../Type/routes'
 export const allRoutes = [
@@ -12,5 +13,6 @@ export const allRoutes = [
     routesItem,
     routesMoveList,
     routesMove,
-    routesType
+    routesType,
+    routesUser,
 ]
